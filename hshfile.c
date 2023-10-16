@@ -109,9 +109,10 @@ void find_cmd(info_t *infostruct)
 	}
 	else
 	{
-		if ((interactive(infostruct) ||	_getenvironment(infostruct, "PATH=") ||
-	infostruct->argv[0][0] == '/') &&
-			excut_cmd(infostruct, infostruct->argv[0]))cmdfork(infostruct);
+		if ((interactive(infostruct) ||	_getenvironment(infostruct, "PATH=")
+			|| infostruct->argv[0][0] == '/') &&
+			excut_cmd(infostruct, infostruct->argv[0]))
+			cmdfork(infostruct);
 		else if (*(infostruct->arg) != '\n')
 		{
 			infostruct->status = 127;
@@ -138,14 +139,14 @@ void cmdfork(info_t *infostruct)
 	}
 	if (chid == 0)
 	{
-		if (execve(infostruct->path, infostruct->argv, getEnvironment(infostruct)) ==
-	-1)
-		{
-	freinfo(infostruct, 1);
-			if (errno == EACCES)
-				exit(126);
+		if (execve(infostruct->path, infostruct->argv, getEnvironment(infostruct))
+				== -1)
+	{
+			freinfo(infostruct, 1);
+		if (errno == EACCES)
+			exit(126);
 			exit(1);
-		}
+	}
 	}
 	else
 	{
