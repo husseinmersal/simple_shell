@@ -21,7 +21,7 @@ int myhist(info_t *infostruct)
 int unset_alias(info_t *infostruct, char *str)
 {
 	char *ptr, charac;
-	Int real;
+	int real;
 
 	ptr = _strngcharct(str, '=');
 	if (!ptr)
