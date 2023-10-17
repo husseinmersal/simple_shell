@@ -59,7 +59,7 @@ int _unsetenvironment(info_t *infostruct, char *var)
 int _setenvironment(info_t *infostruct, char *var, char *val)
 {
 	char *buff = NULL;
-	liststr *pnode;
+	liststr_t *pnode;
 	char *ptr;
 
 	if (!var || !val)
