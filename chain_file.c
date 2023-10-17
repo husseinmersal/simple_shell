@@ -113,7 +113,7 @@ int repalias(info_t *infostruct)
 int repvars(info_t *infostruct)
 {
 	int countr = 0;
-	iiststr_t *pnode;
+	liststr_t *pnode;
 
 	for (countr = 0; infostruct->argv[countr]; countr++)
 	{
@@ -137,7 +137,7 @@ int repvars(info_t *infostruct)
 		if (pnode)
 		{
 			repstring(&(infostruct->argv[countr]),
-				_strngduplic(_strngcharct(pnode->str, '=') + 1));
+				_strngduplic(_strngcharct(pnode->strng, '=') + 1));
 			continue;
 		}
 		repstring(&infostruct->argv[countr], _strngduplic(""));
