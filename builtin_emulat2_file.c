@@ -28,7 +28,7 @@ int unset_alias(info_t *infostruct, char *str)
 		return (1);
 	charac = *ptr;
 	*ptr = 0;
-	ret = delnod(&(infostruct->alias),
+	real = delnod(&(infostruct->alias),
 		get_index_of_node(infostruct->alias, ThenodeStartsWith(infostruct->alias,
 			str, -1)));
 	*ptr = charac;
@@ -86,9 +86,9 @@ int print_alias(liststr_t  *pnode)
 
 	if (pnode)
 	{
-		ptr = _strngcharct(pnode->str, '=');
-		for (count = pnode->str; count <= ptr; count++)
-			_putchar(*a);
+		ptr = _strngcharct(pnode->strng, '=');
+		for (count = pnode->strng; count <= ptr; count++)
+			_putchar(*count);
 		_putchar('\'');
 		_puts(ptr + 1);
 		_puts("'\n");
