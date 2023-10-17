@@ -67,7 +67,7 @@ size_t prent_lest(const liststr_t *ptrh)
 
 	while (ptrh)
 	{
-		_puts(convnum(ptrh->num, 10, 0));
+		_puts(convnum(ptrh->numb, 10, 0));
 		_putchar(':');
 		_putchar(' ');
 		_puts(ptrh->strng ? ptrh->strng : "(nil)");
