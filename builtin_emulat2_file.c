@@ -122,7 +122,7 @@ int alis(info_t *infostruct)
 	{
 		ptr = _strngcharct(infostruct->argv[countr], '=');
 		if (ptr)
-			set_alias(pnode, infostruct->argv[countr]);
+			set_alias(infostruct, infostruct->argv[countr]);
 		else
 			print_alias(ThenodeStartsWith(infostruct->alias, infostruct->argv[countr], '='));
 	}
