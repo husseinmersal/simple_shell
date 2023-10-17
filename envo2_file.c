@@ -68,9 +68,9 @@ int _setenvironment(info_t *infostruct, char *var, char *val)
 	buff = malloc(_stringleng(var) + _stringleng(val) + 2);
 	if (!buff)
 		return (1);
-	_strngcopi(buff, var);
-	_strngcopi(buff, "=");
-	_strngcopi(buff, val));
+	_strngcopy(buff, var);
+	_stringconcat(buff, "=");
+	_stringconcat(buff, val);
 	pnode = infostruct->env;
 	while (pnode)
 	{
