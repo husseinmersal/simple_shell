@@ -18,9 +18,9 @@ char *git_fil_hist(info_t *infostruct)
 	if (!buff)
 		return (NULL);
 	buff[0] = 0;
-	_strngcopi(buff, fol);
-	_strngcopi(buff, "/");
-	_strngcopi(buff, HIST_FILE);
+	_strngcopy(buff, fol);
+	_strngcopy(buff, "/");
+	_strngcopy(buff, HIST_FILE);
 	return (buff);
 }
 
@@ -46,10 +46,10 @@ int create_hist(info_t *infostruct)
 		return (-1);
 	for (pnode = infostruct->history; pnode; pnode = pnode->next)
 	{
-		_putsfd(pnode->str, fdiscription);
+		_putsfd(pnode->strng, fdiscription);
 		_putfildescriptor('\n', fdiscription);
 	}
-	_putfildescriptor(BUF_FLUSH, fdiscription);
+	_putfildescriptor(BUFF_FLCH, fdiscription);
 	close(fdiscription);
 	return (1);
 }

@@ -64,7 +64,7 @@ ssize_t gitinput(info_t *infostruct)
 	ssize_t read = 0;
 	char **bufptr = &(infostruct->arg), *ptr;
 
-	_putchar(BUF_FLUSH);
+	_putchar(BUFF_FLCH);
 	read = input_buf(infostruct, &buff, &lngth);
 	if (read == -1) 
 		return (-1);
@@ -106,14 +106,14 @@ ssize_t gitinput(info_t *infostruct)
  */
 ssize_t readbuffer(info_t *infostruct, char *buff, size_t *siz)
 {
-	ssize_t read = 0;
+	ssize_t re = 0;
 
 	if (*siz)
 		return (0);
-	read = read(infostruct->readfd, buff, R_BUFF_SIZE );
-	if (read >= 0)
-		*siz = read;
-	return (read);
+	re = read(infostruct->readfd, buff, R_BUFF_SIZE );
+	if (re >= 0)
+		*siz = re;
+	return (re);
 }
 
 /**
@@ -173,6 +173,6 @@ void sigintHandler(__attribute__((unused))int sig_num)
 {
 	_puts("\n");
 	_puts("$ ");
-	_putchar(BUF_FLUSH);
+	_putchar(BUFF_FLCH);
 }
 
