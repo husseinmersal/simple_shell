@@ -74,11 +74,11 @@ int _setenvironment(info_t *infostruct, char *var, char *val)
 	pnode = infostruct->env;
 	while (pnode)
 	{
-		ptr = starts_with_char(pnode->str, var);
+		ptr = starts_with_char(pnode->strng, var);
 		if (ptr && *ptr == '=')
 		{
-			free(pnode->str);
-			pnode->str = buff;
+			free(pnode->strng);
+			pnode->strng = buff;
 			infostruct->env_changed = 1;
 			return (0);
 		}

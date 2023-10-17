@@ -43,12 +43,12 @@ char *_getenvironment(info_t *infostruct, const char *pname)
  */
 int _mysetenviron(info_t *infostruct)
 {
-	if (info->argc != 3)
+	if (infostruct->argc != 3)
 	{
 		_strputs("Incorrect number of arguements\n");
 		return (1);
 	}
-	if (_setenvironment(info, info->argv[1], info->argv[2]))
+	if (_setenvironment(infostruct, infostruct->argv[1], infostruct->argv[2]))
 		return (0);
 	return (1);
 }
