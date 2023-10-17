@@ -48,7 +48,11 @@ char *_strngduplic(const char *ptrstr)
 /**
  *_puts - prints the string that passes as an argument
  *@ptrstr: the string to be printed by the function
+<<<<<<< HEAD
  *@countr: is an argument that count the length
+=======
+ *
+>>>>>>> 80205130705a5ae5610bc7f8753157537b11fbae
  * Return: Nothing
  */
 void _puts(char *ptrstr)

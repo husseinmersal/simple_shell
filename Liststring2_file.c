@@ -100,7 +100,7 @@ liststr_t *ThenodeStartsWith(liststr_t *pnode, char *prfx, char charac)
 }
 
 /**
- * get_index_of_node: this function will be return the index of the node
+ * get_index_of_node - this function will be return the index of the node
  * @ptrh: the pointer that points to the head
  * @nod: a pointer that pointer to the node
  *
