@@ -30,8 +30,8 @@ void settinfo(info_t *infostruct, char **argvector)
 			infostruct->argv = malloc(sizeof(char *) * 2);
 			if (infostruct->argv)
 			{
-				info->argv[0] = _strngduplic(infostruct->arg);
-				info->argv[1] = NULL;
+				infostruct->argv[0] = _strngduplic(infostruct->arg);
+				infostruct->argv[1] = NULL;
 			}
 		}
 		for (countr = 0; infostruct->argv && infostruct->argv[countr]; countr++)
@@ -68,6 +68,6 @@ void freinfo(info_t *infostruct, int all)
 		pointfree((void **)infostruct->cmd_buf);
 		if (infostruct->readfd > 2)
 			close(infostruct->readfd);
-		_putchar(BUF_FLUSH);
+		_putchar(BUFF_FLCH);
 	}
 }
