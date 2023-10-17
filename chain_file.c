@@ -14,7 +14,7 @@ int mychain(info_t *infostruct, char *buff, size_t *ptr)
 
 	if (buff[countr] == '|' && buff[countr + 1] == '|')
 	{
-		buff[j] = 0;
+		buff[countr] = 0;
 		countr++;
 		infostruct->cmd_buf_type = CMD_OR;
 	}
@@ -94,7 +94,7 @@ int repalias(info_t *infostruct)
 		if (!pnode)
 			return (0);
 		free(infostruct->argv[0]);
-		ptr = _strngcharct(pnode->str, '=');
+		ptr = _strngcharct(pnode->strng, '=');
 		if (!ptr)
 			return (0);
 		ptr = _strngduplic(ptr + 1);
