@@ -15,7 +15,7 @@ int hsh(info_t *infostruct, char **argv)
 		clrinfo(infostruct);
 		if (interactive(infostruct))
 			_puts("$ ");
-		_eputchar(BUF_FLUSH);
+		_eputchar(BUFF_FLCH);
 		cr = gitinput(infostruct);
 		if (cr != -1)
 		{
@@ -67,7 +67,7 @@ int find_builtin(info_t *infostruct)
 	};
 
 	for (countr = 0; builtinarr[countr].type; countr++)
-		if (_strcompar(infostruct > argv[0], builtinarr[countr].type) == 0)
+		if (_strcompar(infostruct->argv[0], builtinarr[countr].type) == 0)
 		{
 			infostruct->line_count++;
 			builtin_re = builtinarr[countr].func(infostruct);
@@ -94,7 +94,7 @@ void find_cmd(info_t *infostruct)
 		infostruct->linecount_flag = 0;
 	}
 	for (countr1 = 0, countr2 = 0;
-			infostruct->arg[countr1]; i++)
+			infostruct->arg[countr1]; countr1++)
 		if (!is_delim(infostruct->arg[countr1], " \t\n"))
 			countr2++;
 	if (!countr2)
@@ -105,7 +105,7 @@ void find_cmd(info_t *infostruct)
 	if (path)
 	{
 		infostruct->path = path;
-		cmdfork(info);
+		cmdfork(infostruct);
 	}
 	else
 	{
@@ -145,7 +145,7 @@ void cmdfork(info_t *infostruct)
 			freinfo(infostruct, 1);
 		if (errno == EACCES)
 			exit(126);
-			exit(1);
+		exit(1);
 	}
 	}
 	else
