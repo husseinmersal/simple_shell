@@ -46,9 +46,8 @@ char *_strngduplic(const char *ptrstr)
 }
 
 /**
- *_puts - prints an srgumant
+ *_puts - prints an argumant
  *@ptrstr: a string
- *
  * Return: Nothing
  */
 void _puts(char *ptrstr)
