@@ -3,7 +3,7 @@
 /**
  * excut_cmd - checks if is executable command
  * @infostruct: is a struct
- * @pt: path of file
+ * @pt: the path of file
  *
  * Return: 1 if true, 0 otherwise
  */
