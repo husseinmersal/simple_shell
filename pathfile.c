@@ -44,7 +44,7 @@ char *duplchar(char *pstrng, int strt, int stp)
 
 /**
  * find_path - findsthe path
- * @infostruct: a struct
+ * @infostruct: the struct
  * @pstrng: the PATH string
  * @cmd: the cmd
   * Return: full path OR NULL
