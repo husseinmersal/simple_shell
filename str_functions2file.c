@@ -48,13 +48,14 @@ char *_strngduplic(const char *ptrstr)
 /**
  *_puts - prints an srgumant
  *@ptrstr: a string
- *@countr: counts the length
+ *@countr: countrs the length
  * Return: Nothing
  */
 void _puts(char *ptrstr)
 {
 	int countr = 0;
 	if (!ptrstr)
+
 		return;
 	while (ptrstr[countr] != '\0')
 	{
