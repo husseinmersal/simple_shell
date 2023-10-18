@@ -51,7 +51,7 @@ int _unsetenvironment(info_t *infostruct, char *var)
 
 /**
  * _setenvironment - Initialize an env var
- * @infostruct: a struct
+ * @infostruct: the struct
  * @var: env variable
  * @val: string value
  *  Return: Always 0
