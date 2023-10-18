@@ -41,8 +41,8 @@ extern char **environ;
 
 
 /**
- * struct liststr - singly linked list
- * @numb: the number input 
+ * struct liststring - singly linked list
+ * @numb: the number input
  * @strng: a string
  * @next: points to the next node
  */
@@ -50,7 +50,7 @@ typedef struct liststring
 {
 	int numb;
 	char *strng;
-	struct liststring*next;
+	struct liststring *next;
 } liststr_t;
 
 /**
@@ -109,8 +109,8 @@ typedef struct passinfo
 typedef struct builtin
 {
 	char *type;
-        int (*func)(info_t *);
-	
+	int (*func)(info_t *);
+
 } builtin_table;
 
 
@@ -118,7 +118,7 @@ typedef struct builtin
 int hsh(info_t *, char **);
 int find_builtin(info_t *);
 void find_cmd(info_t *);
-void cmdfork(info_t *);  
+void cmdfork(info_t *);
 
 /* pathfile.c */
 int excut_cmd(info_t *, char *);
@@ -141,7 +141,7 @@ char *starts_with_char(const char *, const char *);
 char *_stringconcat(char *, char *);
 
 /* str_functions2file.c */
-char *_strngcopy (char *, char *);
+char *_strngcopy(char *, char *);
 char *_strngduplic(const char *);
 void _puts(char *);
 int _putchar(char);
@@ -213,7 +213,7 @@ int _setenvironment(info_t *, char *, char *);
 char *git_fil_hist(info_t *info);
 int create_hist(info_t *info);
 int redhist(info_t *info);
-int build_hist (info_t *info, char *buf, int linecount);
+int build_hist(info_t *info, char *buf, int linecount);
 int renew_hist(info_t *info);
 
 /* liststring_file.c module */
@@ -234,7 +234,7 @@ ssize_t get_index_of_node(liststr_t *, liststr_t *);
 int mychain(info_t *, char *, size_t *);
 void ckchain(info_t *, char *, size_t *, size_t, size_t);
 int repalias(info_t *);
-int repvars (info_t *);
+int repvars(info_t *);
 int repstring(char **, char *);
 
 #endif
