@@ -126,7 +126,6 @@ int alis(info_t *infostruct)
 		else
 			print_alias(ThenodeStartsWith(infostruct->alias,
 					infostruct->argv[countr], '='));
-					infostruct->argv[countr], '='));
 	}
 
 	return (0);
