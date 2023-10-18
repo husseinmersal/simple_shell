@@ -52,7 +52,7 @@ char *starts_with_char(const char *hellostack, const char *needle)
 	while (*needle)
 		if (*needle++ != *hellostack++)
 			return (NULL);
-	return ((char *)haystack);
+	return ((char *)hellostack);
 }
 
 /**

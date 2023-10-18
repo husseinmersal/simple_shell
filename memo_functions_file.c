@@ -50,13 +50,13 @@ void *_realloctmem(void *ptrar, unsigned int last_size, unsigned int next_size)
 	if (next_size == last_size)
 		return (ptrar);
 
-	ptrar = malloc(next_size);
-	if (!ptrar)
+	parr = malloc(next_size);
+	if (!parr)
 		return (NULL);
 
 	last_size = last_size < next_size ? last_size : next_size;
 	while (last_size--)
-		ptrar[last_size] = ((char *)ptrar)[last_size];
+		parr[last_size] = ((char *)ptrar)[last_size];
 	free(ptrar);
-	return (ptrar);
+	return (parr);
 }

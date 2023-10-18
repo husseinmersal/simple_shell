@@ -12,7 +12,7 @@ char *_strngcopi(char *destinat, char *srce, int numb)
 	int count1, count2;
 	char *s = destinat;
 
-	i = 0;
+	count1 = 0;
 	while (srce[count1] != '\0' && count1 < numb - 1)
 	{
 		destinat[count1] = srce[count1];
@@ -67,7 +67,7 @@ char *_strngcharct(char *ptrstr, char charac)
 {
 	do {
 		if (*ptrstr == charac)
-			return (s);
+			return (ptrstr);
 	} while (*ptrstr++ != '\0');
 
 	return (NULL);

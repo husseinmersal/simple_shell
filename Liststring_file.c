@@ -19,9 +19,9 @@ liststr_t *adnod(liststr_t **head, const char *str, int numb)
 		return (NULL);
 	_memoset((void *)nwhead, 0, sizeof(liststr_t));
 	nwhead->numb = numb;
-	if (strng)
+	if (str)
 	{
-		nwhead->strng = _strngduplic(strng);
+		nwhead->strng = _strngduplic(str);
 		if (!nwhead->strng)
 		{
 			free(nwhead);

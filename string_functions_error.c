@@ -35,7 +35,7 @@ int _eputchar(char charac)
 		write(2, buffe, countr);
 		countr = 0;
 	}
-	if (charac != BUF_FLUSH)
+	if (charac != BUFF_FLCH)
 		buffe[countr++] = charac;
 	return (1);
 }
@@ -60,7 +60,7 @@ int _putfildescriptor(char charac, int fildescript)
 		write(fildescript, buff, countr);
 		countr = 0;
 	}
-	if (charac != BUF_FLUSH)
+	if (charac != BUFF_FLCH)
 		buff[countr++] = charac;
 	return (1);
 }

@@ -103,10 +103,10 @@ char *convnum(long int numb, int bas, int flg)
 	if (!(flg & COV_UNSGND) && numb < 0)
 	{
 		n = -numb;
-		sign = '-';
+		signat = '-';
 
 	}
-	Strarr = flg & COV_LCASE ? "0123456789abcdef" : "0123456789ABCDEF";
+	strarr = flg & COV_LCASE ? "0123456789abcdef" : "0123456789ABCDEF";
 	ptr = &buf[49];
 	*ptr = '\0';
 

@@ -80,12 +80,12 @@ int _putchar(char c)
 	static int countr;
 	static char bufer[W_BUFF_SIZE];
 
-	if (c == BUFF_FLCH || I >= W_BUFF_SIZE)
+	if (c == BUFF_FLCH || countr >= W_BUFF_SIZE)
 	{
 		write(1, bufer, countr);
 		countr = 0;
 	}
-	if (c != BUF_FLUSH)
+	if (c != BUFF_FLCH)
 		bufer[countr++] = c;
 	return (1);
 }

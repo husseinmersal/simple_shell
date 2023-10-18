@@ -69,7 +69,7 @@ int _myunsetenv(info_t *infostruct)
 		return (1);
 	}
 	for (countr = 1; countr <= infostruct->argc; countr++)
-		_setenvironment(infostruct, infostruct->argv[countr]);
+		_unsetenvironment(infostruct, infostruct->argv[countr]);
 
 	return (0);
 }

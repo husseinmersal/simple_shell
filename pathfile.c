@@ -12,7 +12,7 @@ int excut_cmd(info_t *infostruct, char *pt)
 	struct stat sta;
 
 	(void)infostruct;
-	if (!pt || stat(path, &sta))
+	if (!pt || stat(pt, &sta))
 		return (0);
 
 	if (sta.st_mode & S_IFREG)
@@ -67,15 +67,15 @@ char *find_path(info_t *infostruct, char *pstrng, char *cmd)
 		{
 			path = duplchar(pstrng, curpos, countr);
 			if (!*path)
-				_strngconcat(path, cmd);
+				_stringconcat(path, cmd);
 			else
 			{
-				_strngconcat(path, "/");
-				_strngconcat(path, cmd);
+				_stringconcat(path, "/");
+				_stringconcat(path, cmd);
 			}
 			if (excut_cmd(infostruct, path))
 				return (path);
-			if (!pstrng[i])
+			if (!pstrng[countr])
 				break;
 			curpos = countr;
 		}
