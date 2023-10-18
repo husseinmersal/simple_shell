@@ -54,6 +54,7 @@ char *_strngduplic(const char *ptrstr)
 void _puts(char *ptrstr)
 {
 	int countr = 0;
+
 	if (!ptrstr)
 
 		return;
