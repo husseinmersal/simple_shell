@@ -2,7 +2,7 @@
 
 /**
  * getEnvironment- return a copy
- * @infostruct: a struct
+ * @infostruct: the struct
  * Return: Always 0
  */
 char **getEnvironment(info_t *infostruct)
