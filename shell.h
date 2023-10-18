@@ -77,22 +77,22 @@ typedef struct liststring
 typedef struct passinfo
 {
 	char *arg;
+	char **argv;
+	char *path;
+	int argc;
+	unsigned int line_count;
 	int err_num;
 	int linecount_flag;
 	char *fname;
-	liststr_t *env;   
-	liststr_t *history;  
-           char **argv;
-          char *path;
-	int argc;
-	unsigned int line_count;          
-	liststr_t *alias;
+	liststr_t *env;
+	liststr_t  *history;
+	liststr_t  *alias;
 	char **environ;
 	int env_changed;
 	int status;
 
-	char **cmd_buf; 
-	int cmd_buf_type; 
+	char **cmd_buf; /* pointer to cmd ; chain buffer, for memory mangement */
+	int cmd_buf_type; /* CMD_type ||, &&, ; */
 	int readfd;
 	int histcount;
 } info_t;
