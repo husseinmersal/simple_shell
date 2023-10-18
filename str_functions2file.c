@@ -46,19 +46,14 @@ char *_strngduplic(const char *ptrstr)
 }
 
 /**
- *_puts - prints the string that passes as an argument
- *@ptrstr: the string to be printed by the function
-<<<<<<< HEAD
- *@countr: is an argument that count the length
-=======
- *
->>>>>>> 80205130705a5ae5610bc7f8753157537b11fbae
+ *_puts - prints an srgumant
+ *@ptrstr: a string
+ *@countr: counts the length
  * Return: Nothing
  */
 void _puts(char *ptrstr)
 {
 	int countr = 0;
-
 	if (!ptrstr)
 		return;
 	while (ptrstr[countr] != '\0')
