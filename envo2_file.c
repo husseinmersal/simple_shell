@@ -18,7 +18,7 @@ char **getEnvironment(info_t *infostruct)
 
 /**
  * _unsetenvironment- Remove the env var
- * @infostruct: a struct
+ * @infostruct: the struct
  *  Return: 1 on delete, 0 otherwise
  * @var:string var
  */
